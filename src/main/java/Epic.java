@@ -11,12 +11,11 @@ public class Epic extends Task {
     }
 
     public boolean matches(String query) {
-        if (query.contains(subtasks))
-        {
-            return true;
+        for (int i = 0; i < subtasks.length; i++) {
+            if (query.contains(subtasks[i])) {
+                return true;
+            }
         }
-        else {
-            return false;
-        }
+        return false;
     }
 }
